@@ -6,8 +6,7 @@ import database_managers.DBUserDataManager;
 import functional.MainSystem;
 import data.User;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class DataManagersTest {
 
@@ -15,8 +14,8 @@ public class DataManagersTest {
     public void checkUser() {
         MainSystem system = new MainSystem();
         DBUserDataManager userDataManager = system.getUserDataManager();
-        assertEquals(userDataManager.checkUser(new User("admin","1111")),true);
-        assertEquals(userDataManager.checkUser(new User("admin","12341")),false);
+        assertTrue(userDataManager.checkUser(new User("admin", "1111")));
+        assertFalse(userDataManager.checkUser(new User("admin", "12341")));
     }
 
     @org.junit.Test
