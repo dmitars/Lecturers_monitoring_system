@@ -7,6 +7,9 @@ import javafx.fxml.FXMLLoader;
 
 import java.util.Arrays;
 
+import static consts.Сonst.ADMIN_VIEW_PATH;
+import static consts.Сonst.ADMIN_VIEW_TITLE;
+
 public class AdminPageLoader extends Loader{
     public AdminPageLoader(MainSystem system) {
         super(system);
@@ -14,12 +17,12 @@ public class AdminPageLoader extends Loader{
 
     @Override
     void setTitle() {
-        title = "Окно администратора";
+        title = ADMIN_VIEW_TITLE;
     }
 
     @Override
     void setPagePath() {
-        pagePath = "../views/adminDialogView.fxml";
+        pagePath = ADMIN_VIEW_PATH;
     }
 
     @Override

@@ -1,5 +1,7 @@
 package data;
 
+import static consts.Сonst.*;
+
 public class Plan {
     private int id;
     public WorkType workType;
@@ -21,7 +23,7 @@ public class Plan {
     public Plan(Integer id, WorkType workType,String namePlan,Integer startYear,Integer endYear,
                 Integer allHours,Integer performedHours, Integer professorID) throws Exception{
         if(namePlan.equals(""))
-            throw new Exception("empty name");
+            throw new Exception(INCORRECT_PLAN_NAME_MESSAGE);
         this.workType = workType;
         this.namePlan = namePlan;
         checkYears(startYear,endYear);
@@ -30,9 +32,9 @@ public class Plan {
         this.allHours = allHours;
         this.professorID = professorID;
         if(allHours<=0)
-            throw new Exception("incorrect number of plan hours");
+            throw new Exception(INCORRECT_PLAN_HOURS_MESSAGE);
         if(performedHours<0)
-            throw new Exception("incorrect number of performed hours");
+            throw new Exception(INCORRECT_PERFORMED_HOURS_MESSAGE);
         this.performedHours = performedHours;
         this.id = id;
     }
@@ -45,12 +47,12 @@ public class Plan {
         checkDate(startYear);
         checkDate(endYear);
         if(startYear>=endYear)
-            throw new Exception("incorrect time interval");
+            throw new Exception(INCORRECT_TIME_INTERVAL_MESSAGE);
     }
 
     private void checkDate(int year) throws Exception {
         if(year<1950 || year>2100){
-            throw new Exception("incorrect start year");
+            throw new Exception(INCORRECT_YEAR_MESSAGE);
         }
     }
 

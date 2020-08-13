@@ -3,6 +3,9 @@ package loaders;
 import functional.MainSystem;
 import javafx.fxml.FXMLLoader;
 
+import static consts.Сonst.LOGIN_VIEW_PATH;
+import static consts.Сonst.LOGIN_VIEW_TITLE;
+
 public class LoginPageLoader extends Loader{
     public LoginPageLoader(MainSystem system) {
         super(system);
@@ -10,12 +13,12 @@ public class LoginPageLoader extends Loader{
 
     @Override
     void setTitle() {
-        title = "Окно авторизации";
+        title = LOGIN_VIEW_TITLE;
     }
 
     @Override
     void setPagePath() {
-        pagePath = "../views/loginView.fxml";
+        pagePath = LOGIN_VIEW_PATH;
     }
 
     @Override

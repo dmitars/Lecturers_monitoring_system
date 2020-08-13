@@ -5,6 +5,9 @@ import database_managers.DBGetOnlyDataManager;
 import functional.MainSystem;
 import javafx.fxml.FXMLLoader;
 
+import static consts.Сonst.SET_LECTURER_VIEW_PATH;
+import static consts.Сonst.SET_LECTURER_VIEW_TITLE;
+
 public class SetLecturerPageLoader extends Loader{
     public SetLecturerPageLoader(MainSystem system) {
         super(system);
@@ -12,12 +15,12 @@ public class SetLecturerPageLoader extends Loader{
 
     @Override
     void setTitle() {
-        title = "Задайте параметры";
+        title = SET_LECTURER_VIEW_TITLE;
     }
 
     @Override
     void setPagePath() {
-        pagePath = "../views/setLecturerView.fxml";
+        pagePath = SET_LECTURER_VIEW_PATH;
     }
 
     @Override

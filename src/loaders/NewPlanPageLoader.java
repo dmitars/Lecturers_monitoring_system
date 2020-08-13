@@ -5,6 +5,9 @@ import database_managers.DBGetOnlyDataManager;
 import functional.MainSystem;
 import javafx.fxml.FXMLLoader;
 
+import static consts.Сonst.NEW_PLAN_VIEW_PATH;
+import static consts.Сonst.NEW_PLAN_VIEW_TITLE;
+
 public class NewPlanPageLoader extends Loader{
     public NewPlanPageLoader(MainSystem system) {
         super(system);
@@ -12,12 +15,12 @@ public class NewPlanPageLoader extends Loader{
 
     @Override
     void setTitle() {
-        title = "Окно добавления плана";
+        title = NEW_PLAN_VIEW_TITLE;
     }
 
     @Override
     void setPagePath() {
-        pagePath = "../views/newPlanView.fxml";
+        pagePath = NEW_PLAN_VIEW_PATH;
     }
 
     @Override

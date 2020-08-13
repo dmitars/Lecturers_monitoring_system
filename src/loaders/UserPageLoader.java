@@ -6,11 +6,12 @@ import database_managers.DBUserDataManager;
 import functional.MainSystem;
 import javafx.fxml.FXMLLoader;
 
+import static consts.Сonst.USER_VIEW_TITLE;
+
 public class UserPageLoader extends Loader{
 
     public UserPageLoader(MainSystem system) {
         super(system);
-
     }
 
     @Override
@@ -23,7 +24,7 @@ public class UserPageLoader extends Loader{
 
     @Override
     void setTitle() {
-        title = "Окно пользователя";
+        title = USER_VIEW_TITLE;
     }
 
     @Override

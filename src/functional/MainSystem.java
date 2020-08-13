@@ -11,8 +11,10 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import loaders.Loader;
 
+import static consts.Сonst.CONNECTION_FAILED_MESSAGE;
+import static consts.Сonst.DATABASE_PATH;
+
 public class MainSystem extends Application {
-    private final String DATABASE_PATH = "D://DataBase//myBase.db";
     private Stage stage;
 
     private Requester requester;
@@ -40,7 +42,7 @@ public class MainSystem extends Application {
     public void start(Stage stage) {
         requester = new Requester(DATABASE_PATH);
         if (!requester.performConnection()) {
-            ErrorDisplay.showError(new Exception("cannot create connection"));
+            ErrorDisplay.showError(new Exception(CONNECTION_FAILED_MESSAGE));
         } else {
             initializeDataManagers();
             this.stage = stage;

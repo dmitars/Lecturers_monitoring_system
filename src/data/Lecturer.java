@@ -4,6 +4,8 @@ import data.lecturers_additional.DataProvideFieldsAsStringArrayList;
 
 import java.util.ArrayList;
 
+import static consts.Сonst.INCORRECT_DATA_CLASS_MESSAGE;
+
 public abstract class Lecturer {
     final int id;
 
@@ -16,7 +18,7 @@ public abstract class Lecturer {
     }
 
     void throwDataException() throws Exception{
-        throw new Exception("incorrect data class");
+        throw new Exception(INCORRECT_DATA_CLASS_MESSAGE);
     }
 
     public abstract void setData(DataProvideFieldsAsStringArrayList data) throws Exception;

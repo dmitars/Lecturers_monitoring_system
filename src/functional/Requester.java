@@ -10,7 +10,7 @@ public class Requester {
 
     private static Connection conn;
     private static Statement statement;
-    private String dataPath;
+    private final String dataPath;
 
     public Requester(String dataPath){
         this.dataPath = dataPath;
