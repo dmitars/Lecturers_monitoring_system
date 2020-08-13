@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import loaders.Loader;
 
 public class MainSystem extends Application {
-    private final String databasePath = "D://DataBase//myBase.db";
+    private final String DATABASE_PATH = "D://DataBase//myBase.db";
     private Stage stage;
 
     private Requester requester;
@@ -38,7 +38,7 @@ public class MainSystem extends Application {
 
     @Override
     public void start(Stage stage) {
-        requester = new Requester(databasePath);
+        requester = new Requester(DATABASE_PATH);
         if (!requester.performConnection()) {
             ErrorDisplay.showError(new Exception("cannot create connection"));
         } else {
